@@ -8,6 +8,8 @@ let InsightToActionShowcaseState = {
 const dialogTooltipTimeout = 1500;
 const sentMessageTimeout = 3000;
 
+alert('test');
+
 // Embed the report and retrieve the existing report bookmarks
 function embedInsightsToActionReport() {
     InsightToActionShowcaseState.tooltipNextPressed = false;
