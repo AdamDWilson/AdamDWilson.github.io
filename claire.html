@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo" style="padding-top: 0px; margin-top: 0px; font-size: 100vw; text-align: center"></p>
+
+<script>
+var demo = document.getElementById("demo");
+
+document.onkeypress = function(e) {
+  demo.innerText = String.fromCharCode(e.keyCode).toUpperCase();
+};
+</script>
+
+</body>
+</html>
