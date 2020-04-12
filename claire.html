@@ -2,17 +2,19 @@
 <html>
 <body>
 
-<input id="demo" style="padding-top: 0px; margin-top: 0px; font-size: 80vh; font-family: Futura; text-align: center"></input>
-
+<p id="demo" style="padding-top: 0px; margin-top: 0px; font-size: 80vh; font-family: Futura; text-align: center"></p>
+<input id="input"></input>
+  
 <script>
   // Easter colors
   var colors = ['#fff700', '#ffffe0', '#ffffe0', '#bdfcc9', '#ffc0cb', '#ffa07a', '#ffa07a', '#dda0dd', '#c8a2c8', '#ee82ee', '#87ceeb', '#00cccc', '#40e0D0'];
   
+  var input = document.getElementById("input");
   var demo = document.getElementById("demo");
 
-  demo.focus();
+  input.focus();
   
-  demo.onkeypress = function(e) {
+  input.onkeypress = function(e) {
     if (e.keyCode == 32) {
       e.preventDefault()
     } else {
