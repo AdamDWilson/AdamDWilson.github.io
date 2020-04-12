@@ -2,7 +2,7 @@
 <html>
 <body>
 
-<p id="demo" style="padding-top: 0px; margin-top: 0px; font-size: 100vh; text-align: center"></p>
+<input id="demo" style="padding-top: 0px; margin-top: 0px; font-size: 80vh; font-family: Futura; text-align: center"></input>
 
 <script>
   // Easter colors
@@ -10,7 +10,9 @@
   
   var demo = document.getElementById("demo");
 
-  document.onkeypress = function(e) {
+  demo.focus();
+  
+  demo.onkeypress = function(e) {
     if (e.keyCode == 32) {
       e.preventDefault()
     } else {
