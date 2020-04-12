@@ -5,15 +5,25 @@
 <p id="demo" style="padding-top: 0px; margin-top: 0px; font-size: 100vh; text-align: center"></p>
 
 <script>
-var demo = document.getElementById("demo");
+  // Easter colors
+  var colors = ['#fff700', '#ffffe0', '#ffffe0', '#bdfcc9', '#ffc0cb', '#ffa07a', '#ffa07a', '#dda0dd', '#c8a2c8', '#ee82ee', '#87ceeb', '#00cccc', '#40e0D0'];
+  
+  var demo = document.getElementById("demo");
 
-document.onkeypress = function(e) {
-  if (e.keyCode == 32) {
-    e.preventDefault()
-  } else {
-    demo.innerText = String.fromCharCode(e.keyCode).toUpperCase();
-  }
-};
+  document.onkeypress = function(e) {
+    if (e.keyCode == 32) {
+      e.preventDefault()
+    } else {
+      demo.innerText = String.fromCharCode(e.keyCode).toUpperCase();
+      
+      var currentColor = document.body.style.backgroundColor;
+      var newColor;
+      do {
+        newColor = colors[Math.floor(Math.random() * Math.floor(colors.length))];
+      } while (newColor != currentColor)
+      document.body.style.backgroundColor = newColor;
+    }
+  };
 </script>
 
 </body>
